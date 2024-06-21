@@ -1,0 +1,15 @@
+local GroupId = 8331787
+local Tool = game.ReplicatedStorage["SA80V"] 
+
+function onPlayerSpawned(Player)
+    if Player:GetRankInGroup(GroupId) >= 5 then
+        Tool:Clone().Parent = Player.Backpack
+        print("hello")
+    end
+end
+
+game.Players.PlayerAdded:Connect(function(Player)
+    Player.CharacterAdded:Connect(function()
+        onPlayerSpawned(Player)
+    end)
+end)
