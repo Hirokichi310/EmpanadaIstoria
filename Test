@@ -1,8 +1,8 @@
 local GroupId = 8331787
-local Tool = game.ReplicatedStorage["SA80V"] 
+local Tool = game.ReplicatedStorage["Trofeo D'oro"] 
 
 function onPlayerSpawned(Player)
-    if Player:GetRankInGroup(GroupId) >= 5 then
+    if Player:GetRankInGroup(GroupId) >= 1 then
         Tool:Clone().Parent = Player.Backpack
         print("hello")
     end
